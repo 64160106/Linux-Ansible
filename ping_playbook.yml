@@ -1,10 +1,8 @@
-- name: Run tasks on Linux and Windows
-  hosts: all
-  tasks:
-    - name: Ping Linux
-      ansible.builtin.ping:
-      when: ansible_connection != "winrm"
-
-    - name: Ping Windows
-      ansible.windows.win_ping:
-      when: ansible_connection == "winrm"
+---
+  - name: Run tasks on Linux
+    hosts: all
+    tasks:
+      - name: Ping Linux
+        ansible.builtin.ping:
+        when: ansible_connection != "winrm"
+  
