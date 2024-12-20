@@ -1,6 +1,6 @@
 ---
   - name: Run tasks on Linux
-    hosts: all
+    hosts: 10.244.163.155
     tasks:
       - name: Ping Linux
         ansible.builtin.ping:
