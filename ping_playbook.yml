@@ -1,8 +1,8 @@
 ---
-  - name: Run tasks on Linux
-    hosts: 10.244.163.151
-    tasks:
-      - name: Ping Linux
-        ansible.builtin.ping:
-        when: ansible_connection != "winrm"
-  
+- name: Test connectivity to Windows hosts
+  hosts: 10.244.163.155
+  gather_facts: no
+
+  tasks:
+    - name: Test connectivity with win_ping
+      ansible.windows.win_ping:
