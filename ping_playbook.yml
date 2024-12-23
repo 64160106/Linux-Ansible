@@ -1,7 +1,7 @@
 ---
-- name: Ping Test without gathering facts
+- name: Ping Windows
   hosts: all
   gather_facts: no
   tasks:
-    - name: Ping
-      ping:
+    - name: Test Windows connectivity
+      win_ping:
