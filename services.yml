@@ -175,5 +175,6 @@ services:
   BKK-NAG-001:
     - omd
     - nagios
-  # Netbox-IPAM:
-  #   - ufw
+   Netbox-IPAM:
+     - ufw
+ 
