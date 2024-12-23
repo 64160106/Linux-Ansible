@@ -38,8 +38,8 @@
       when: ansible_facts['os_family'] != "Windows"   
 
 ### Task reboot server by call playbook reboot.yaml
-    ##- name: Reboot
-      ##include_tasks: reboot.yaml
+    - name: Reboot
+      include_tasks: reboot.yaml
 
 
 ### Task Check service after reboot by call playbook name "post_check_services.yaml" and looping task by list of service in service.yaml file. And It will run this task only if it found list of service in inventory_hostname
