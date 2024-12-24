@@ -177,4 +177,8 @@ services:
     - nagios
    Netbox-IPAM:
      - ufw
+
+   10.244.163.155:
+    - Windows Time
+    - WinRM
  
